@@ -1,0 +1,43 @@
+
+<div class="container text-primary">
+  <header class="border-primary border-bottom lh-1 py-3">
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-xxl-3 pt-1">
+        <h1>
+          <strong>{{obj?.titleOne}}</strong> <small>{{obj?.titleTwo}}</small>
+        </h1>
+      </div>
+      <div class="col-xxl-6">
+        <div class="input-box">
+          <input type="text" class="form-control form-control-lg bg-primary text-secondary" placeholder="Find...">
+          <button type="button" class="btn btn-link text-secondary">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-xxl-3 my-2 my-xxl-0 d-flex justify-content-between justify-content-xxl-end align-items-center">
+        <button type="button" class="btn btn-lg btn-primary me-2 w-50 text-nowrap text-secondary">
+          <i class="fa fa-arrow-up fa-xs"></i> Upload
+        </button>
+        <div class="d-flex justify-content-between">
+          <button type="button"class="btn btn-lg btn-primary me-2 text-secondary">
+            <i class="fa fa-user fa-xs"></i>
+          </button>
+          <div class="profile-box">
+            <h4 class="m-0">{{obj?.profile?.firstName}}</h4>
+            {{obj?.profile?.lastName}}
+            <span class="rounded-circle border">
+              {{obj?.profile?.initial}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-5 border-primary border-bottom">
+    <nav class="nav nav-underline justify-content-start align-items-center text-primary">
+      <a *ngFor="let item of obj.nav; let i = index;" class="nav-item nav-link link-body-emphasis text-primary" (click)="changeActive(item)" [class.active]="item.active" [href]="item.link">{{item.name}} <span *ngIf="i+1 < obj.nav.length" class="px-xl-4 px-2">/</span></a>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<footer class="countainer bg-secondary pt-3 pb-5 border-primary border-top text-primary">
+  <div class="row">
+    <div class="col mb-4">
+      <button class=" x btn btn-sm btn-primary me-2 text-secondary"><i class="fa fa-twitter"></i></button>
+      <button class="btn btn-sm btn-primary mx-2 text-secondary"><i class="fa fa-linkedin"></i></button>
+      <button class="btn btn-sm btn-primary mx-2 text-secondary"><i class="fa fa-facebook"></i></button>
+    </div>
+
+    <div class="nav-scroller mb-4">
+      <nav class="nav nav-underline justify-content-start align-items-center text-primary">
+        <a *ngFor="let item of obj.nav; let i = index;" class="nav-item nav-link link-body-emphasis text-primary" (click)="changeActive(item)" [class.active]="item.active" [href]="item.link">{{item.name}} <span *ngIf="i+1 < obj.nav.length" class="px-2">/</span></a>
+      </nav>
+    </div>
+    <div class="col">
+      <p class="p-0 m-0">@Copyright {{year}} companyname inc.</p>
+      <div class="nav-scroller">
+        <div class="nav nav-underline justify-content-start align-items-center">
+          <a class="nav-item nav-link link-body-emphasis text-primary" href="javascript::void()">Privacy</a> /
+          <a class="nav-item nav-link link-body-emphasis text-primary" href="javascript::void()">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

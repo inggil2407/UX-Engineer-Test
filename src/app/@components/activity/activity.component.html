@@ -1,0 +1,18 @@
+
+<div class="col d-flex justify-content-between w-100 align-items-center border-primary border-bottom border-primary border-3">
+  <h2>{{title}}</h2>
+  <span role="button">{{titleLink}}</span>
+</div>
+<ul class="list-unstyled mb-5 mt-4 pb-2 border-primary border-bottom">
+  <li *ngFor="let data of arrayData">
+    <a class="activity d-flex flex-column flex-xxl-row gap-3 align-items-start align-items-xxl-center py-2 link-body-emphasis text-decoration-none" href="javascript::void()"  (mouseenter)="data.hover = true" (mouseleave)="data.hover = false">
+      <svg class="bd-placeholder-img-sm" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+      <div class="col-xxl-8 d-flex flex-column text-primary">
+        <h6 class="mb-0"><strong>{{data.user}}</strong> {{data.type}}</h6>
+        <small class="text-truncate">{{data.text}}.</small>
+        <small> <i class="fa" [class.fa-comment-o]="data.type == 'commented'" [class.fa-heart]="data.type == 'liked a video'"></i> {{data.time | dateAgo}}</small>
+      </div>
+      <span *ngIf="data.hover" class="badge-custom-primary"><i class="fa fa-close custom-symbol"></i></span>
+    </a>
+  </li>
+</ul>

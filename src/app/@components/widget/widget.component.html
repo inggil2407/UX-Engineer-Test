@@ -1,0 +1,99 @@
+
+<div [attr.id]="id" class="row">
+  <div class="col-xxl-8">
+    <div class="d-flex justify-content-between w-100 align-items-center text-primary">
+      <h2>{{title}}</h2>
+      <span role="button">{{titleLink}}</span>
+    </div>
+  </div>
+</div>
+<div class="row mb-5">
+  <div class="col-xxl-8">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="counter">
+          <svg class="bd-placeholder-img-lg mb-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div  role="button" class="thumbnail">
+            <div  class="thumbnail-text w-100 px-2">
+              <h4 class="py-0 my-0">{{arrayData[0].title}}</h4>
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{id == 'documents' ? 'By ' : '' }}{{arrayData[0].user || ''}}</strong>
+                <strong>{{arrayData[0].views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xxl-6">
+        <div class="counter">
+          <svg class="bd-placeholder-img mb-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div  role="button" class="thumbnail">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex flex-column justify-content-between align-items-start text-bold">
+                <strong>{{arrayData[1].user || arrayData[1].title || ''}}</strong>
+                <strong>{{arrayData[1].views || '' }} {{arrayData[2].views ? 'views' : ''}}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-6">
+        <div class="counter">
+          <svg class="bd-placeholder-img mb-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div  role="button" class="thumbnail">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex flex-column justify-content-between align-items-start text-bold">
+                <strong>{{arrayData[2].user || arrayData[2].title || ''}}</strong>
+                <strong>{{arrayData[2].views || '' }} {{arrayData[2].views ? 'views' : ''}}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-4">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="counter">
+          <svg class="bd-placeholder-img mb-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div  role="button" class="thumbnail">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex flex-column justify-content-between align-items-start text-bold">
+                <strong>{{arrayData[3].user || arrayData[3].title || ''}}</strong>
+                <strong>{{arrayData[3].views || '' }} {{arrayData[3].views ? 'views' : ''}}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12">
+        <div class="counter">
+          <svg class="bd-placeholder-img mb-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div  role="button" class="thumbnail">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex flex-column justify-content-between align-items-start text-bold">
+                <strong>{{arrayData[4].user || arrayData[4].title || ''}}</strong>
+                <strong>{{arrayData[4].views || '' }} {{arrayData[4].views ? 'views' : ''}}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12">
+        <div class="counter-panel">
+          <svg class="bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div role="button" class="video-upload d-flex align-items-center justify-content-center">
+            <i class=" fa {{iconWidget}} fa-lg" ></i>
+            <div class="ms-4 d-flex flex-column align-items-start text-bold">
+              <strong>{{titleWidget.first}}</strong>
+              <strong>{{titleWidget.last}}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

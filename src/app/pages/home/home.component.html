@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<main class="container">
+  <div class="row">
+    <div div class="col-xxl-8 col-lg-6 text-secondary">
+      <component-videos></component-videos>
+    </div>
+    <div class="col-xxl-4 col-lg-6 text-primary">
+      <component-activity></component-activity>
+    </div>
+  </div>
+
+
+  <div class="row mb-2">
+    <div class="col-xxl-8 col-lg-6 text-secondary">
+      <component-widget
+        [title]="people.title"
+        [titleLink]="people.titleLink"
+        [arrayData]="people.arrayData"
+        [iconWidget]="people.iconWidget"
+        [titleWidget]="people.titleWidget"
+      ></component-widget>
+      <component-widget
+        [title]="documents.title"
+        [titleLink]="documents.titleLink"
+        [arrayData]="documents.arrayData"
+        [iconWidget]="documents.iconWidget"
+        [titleWidget]="documents.titleWidget"
+      ></component-widget>
+    </div>
+    <div class="col-xxl-4 col-lg-6 text-primary">
+      <component-channels></component-channels>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</main>

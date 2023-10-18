@@ -1,0 +1,109 @@
+
+<div id="videos" class="row">
+  <div class="col-xxl-8">
+    <div class="d-flex justify-content-between w-100 align-items-center text-primary">
+      <h2>{{title}}</h2>
+      <span role="button">{{titleLink}}</span>
+    </div>
+  </div>
+</div>
+<div class="row mb-5">
+  <div class="col-xxl-8">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="counter">
+          <video class="w-100 h-100" width="562" height="307" controls preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div  role="button" #elThumbnail (click)="elThumbnail.style.display='none'" class="thumbnail-video">
+            <div  class="thumbnail-text w-100 px-2">
+              <h4 class="py-0 my-0">{{videoOne.title}}</h4>
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{videoOne.user}}</strong>
+                <strong>{{videoOne.views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xxl-6">
+        <div class="counter">
+          <video class="w-100 h-100" width ="269" height="146" controls preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div  role="button" #elThumbnailTwo (click)="elThumbnailTwo.style.display='none'" class="thumbnail-video">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{videoTwo.user}}</strong>
+                <strong>{{videoTwo.views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-6">
+        <div class="counter">
+          <video class="w-100 h-100" width ="269" height="146" controls preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div  role="button" #elThumbnailThree (click)="elThumbnailThree.style.display='none'" class="thumbnail-video">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{videoThree.user}}</strong>
+                <strong>{{videoThree.views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-4">
+    <div class="row">
+      <div class="col-xxl-12">
+        <div class="counter">
+          <video class="w-100 h-100" width ="269" height="146" controls preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div  role="button" #elThumbnailFour (click)="elThumbnailFour.style.display='none'" class="thumbnail-video">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{videoFour.user}}</strong>
+                <strong>{{videoFour.views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12">
+        <div class="counter">
+          <video class="w-100 h-100" width ="269" height="146" controls preload="metadata">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4#t=0.1" type="video/mp4">
+          </video>
+          <div  role="button" #elThumbnailFive (click)="elThumbnailFive.style.display='none'" class="thumbnail-video">
+            <div  class="thumbnail-text w-100 px-2">
+              <div class="d-flex justify-content-between align-items-center text-bold">
+                <strong>{{videoFive.user}}</strong>
+                <strong>{{videoFive.views}} views</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-12">
+        <div role="button" class="counter-panel">
+          <svg class="bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+          <div role="button" class="video-upload d-flex align-items-center justify-content-center">
+            <i class=" fa fa-arrow-circle-up fa-lg"></i>
+            <div class="ms-4 d-flex flex-column align-items-start text-bold">
+              <strong>Upload</strong>
+              <strong>Your Own Video</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

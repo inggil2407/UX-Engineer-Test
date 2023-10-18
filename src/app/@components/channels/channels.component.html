@@ -1,0 +1,20 @@
+
+<div id="channels" class="col d-flex justify-content-between w-100 align-items-center border-primary border-bottom border-primary border-3">
+  <h2>{{title}}</h2>
+  <span role="button">{{titleLink}}</span>
+</div>
+<div class="row mb-5 mt-4 pb-2 border-primary border-bottom text-secondary">
+  <div *ngFor="let data of arrayData" class="col-xxl-6 col-md-4 col-6 mb-2">
+    <div class="counter" (mouseenter)="data.hover = true" (mouseleave)="data.hover = false">
+      <svg class="bd-placeholder-img-md" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#f8e4cc"/></svg>
+      <div  role="button" class="thumbnail">
+        <div  class="thumbnail-text w-100 px-2">
+          <div class="d-flex justify-content-between align-items-center text-bold">
+            <strong>{{data.name}}</strong>
+          </div>
+        </div>
+      </div>
+      <span *ngIf="data.hover" class="badge-custom-secondary"><i class="fa fa-plus custom-symbol"></i></span>
+    </div>
+  </div>
+</div>
